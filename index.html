@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My App</title>
+  <link rel="stylesheet" href="css/lib.css"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+<header class="box">
+	<img src="img/layout/logo.png" class="pull-right" />
+	<h1>Guess Who</h1>
+</header>
+
+<main>
+  <section class="gameStart">
+    <h2>Think of Someone...</h2>
+    <button onclick="startGuessing()" class="btn btn-lg btn-success">I'm Ready!</button>
+  </section>
+  <section class="gameQuest" style="display: none">
+    <h2></h2>
+    <button onclick="userResponse('yes')" class="btn btn-info">Yes</button>
+    <button onclick="userResponse('no')" class="btn btn-danger">No</button>
+  </section>
+  <section class="gameNewQuest" style="display: none">
+    <h2>OK, I gave up...</h2>
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="newPerson" class="col-sm-6 control-label">Person name:</label>
+        <div class="col-sm-6">
+          <input name="newPerson" type="txt" class="form-control" id="newPerson" placeholder="Your Person" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="newQuest" class="col-sm-6 control-label">New Question</label>
+        <div class="col-sm-6">
+          <input name="newQuest" type="txt" class="form-control" id="newQuest" placeholder="Question to differentiate" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" onclick="addPerson();return false;" class="btn btn-default">Make me Smarter!</button>
+        </div>
+      </div>
+    </form>
+
+
+  </section>
+
+
+</main>
+
+<footer>
+  cofferight &copy; 2016
+</footer>
+
+  <script src="lib/jquery/jquery.js"></script>
+ 
+  
+  <script src="js/app.js"></script>
+ 
+</body>
+</html>
